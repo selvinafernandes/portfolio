@@ -1,0 +1,122 @@
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin flexdir($dir,$justify){
+	flex-direction:$dir;
+	justify-content:$justify;
+
+}
+
+
+@mixin breakpoint($class){
+	@if $class == small {
+		@media(min-width:768px){
+			@content;
+			}
+	}
+	@else if $class == medium {
+		@media(min-width:768px){
+			@content;
+		
+		}
+		
+	}
+	@else if $class == large {
+		@media(min-width:1200px){
+			@content;
+		
+			}
+	}
+
+}
+
+@mixin mq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+	
+@mixin font($val,$font){
+
+	font-size: $val;
+	font-family : $font;
+}
+
+@mixin fontsize($val){
+	font-size : $val;
+}
+
+@mixin menu($color){
+	text-decoration: underline;
+	text-decoration-style:dotted;
+	color:$color;
+	}
+
+
+	
+@mixin linx() {
+	
+	
+	 &:active {
+		.navigation__link--home{
+			@include menu(#FAD538);
+			}
+		.navigation__link--about{
+			
+			@include menu(#FA7154);
+		}
+		.navigation__link--projects{
+			@include menu(#0CD8A5);
+		
+		}
+	}
+	&:hover{
+		.navigation__link--home{
+			@include menu(#FAD538);
+			}
+		.navigation__link--about{
+			
+			@include menu(#FA7154);
+		}
+		.navigation__link--projects{
+			@include menu(#0CD8A5);
+		}
+
+
+	}
+
+}
+
+@mixin transform($xaxis,$yaxis){
+		
+		transform:skew($xaxis,$yaxis);
+
+}
+
+
+
+
+
+
+	
+

@@ -1,0 +1,199 @@
+.navigation {
+	@include flexbox();
+	@include flexdir(row,space-between);
+	flex-wrap: wrap;
+	width : 100%;
+	position : fixed;
+	z-index : 7;
+	&__menu {
+		@include flexbox();
+		flex-direction : row;
+		justify-content : center;
+		align-items : center;
+		padding-left : 20px;
+		padding-right : 20px;
+		list-style-type : none;
+		margin-top: -10px;
+		&--item {
+			padding : 10px;
+			@include fontsize(14px);
+			@include linx();
+			}			
+		}
+	&__social {
+		@include flexbox();
+		flex-direction : row;
+		justify-content : center;
+		align-items : center;
+		padding-left : 20px;
+		padding-right : 20px;
+		margin-top: -10px;
+
+		&__list{
+			display: flex;
+			flex-direction : row;
+			justify-content: center;
+			list-style-type : none;
+
+			&--item {
+			padding : 10px;
+			@include fontsize(14px);
+			@include linx();
+			}
+			&--greet {
+			padding: 10px;
+			@include fontsize(14px);
+			}
+		}
+	}
+	&__toggle {
+		display: none;
+		
+	}
+
+	@include mq('phone-wide') {	
+
+		&__menu{
+		display: none;
+		}	
+		&__social {
+		display: none;
+		}
+		&__toggle {
+		display: block;
+		margin-top: 10px;
+
+			&--icon {
+				display: block;
+				background-color: $white;
+				border-radius: 10px;
+				width: 55px;
+				height: 6px;
+				z-index: 4;
+				margin: 10px 0 0 10px; 
+			}
+
+		&.toggled {
+			
+			display: block;
+			position: absolute;
+				.navigation__toggle--icon {
+				display: block;
+				background-color: black;
+				border-radius: 10px;
+				width: 55px;
+				height: 6px;
+				z-index: 4;
+				margin: 10px 0 0 10px;
+				transition: 0.75s ease-in-out;
+				cursor: pointer;
+				position: absolute;
+				}
+				.icon__1{
+						display: inline-block;
+						transform: rotate(45deg);
+						top: 22px;
+						left: 8px;
+					}
+				.icon__2{
+					display: none;
+				
+				}
+				.icon__3{
+					display: inline-block;
+					transform: rotate(-45deg) ;
+					top: 22px;
+  					left: 8px;
+				}
+			}	
+
+		}
+
+		&.navigation__open{
+			
+			@include flexbox();
+			@include flexdir(row,space-between);
+			flex-wrap: wrap;
+			width : 100vw;
+			height: 100vh;
+			background-color: $white;
+			
+				.navigation__menu {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+					.navigation__menu--item {
+
+						@include fontsize(50px);
+						font-family: $font-pack1;
+						padding:10px;
+						a {
+							&.navigation__link--home{
+								color:$sunshine;
+							}
+							&.navigation__link--about{
+			
+								color:$primary-color;
+							}
+							&.navigation__link--projects{
+									color:$aqua;
+							}
+						}			
+					}
+				}
+
+				.navigation__social {
+				width:100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+					.nav__greeting {
+						text-align: center;
+						@include fontsize(25px);
+					}
+					.navigation__social__list {
+						padding: 0;
+					}
+				}
+
+
+		}
+	}
+
+}
+
+
+	
+.fa {
+    font-size : 21px;
+    width : 21px;
+    text-align : center;
+    text-decoration : none;
+    border-radius : 50%;
+    
+}
+
+.fa-linkedin {
+    background : $coal;
+    color : white;
+    padding : 5px;
+}
+
+
+.fa-github-alt {
+	background : $coal;
+	color : white;
+	padding : 5px;
+	}
+
+
+
+
+
+
+
+
+	
+	
