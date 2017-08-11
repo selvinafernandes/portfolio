@@ -17,9 +17,8 @@
 		@include transform(0deg,5deg);
 		width : 100%;
 		opacity : 0.8;
-		position : absolute;
-		}
-	&__title{
+	}
+	&__title {
 		align-self: flex-end;
 		width : 50%;
 		z-index : 3;
@@ -28,18 +27,16 @@
 		&--greet {
 			@include fontsize(50px) ;
 			align-self: center;
-			font-family : 'Quicksand', sans-serif; 
+			font-family : $font-pack1;
 			color: $white;
 		}
 		&--name {
 			@include fontsize(60px);
 			z-index : 3;
 			align-self: center;
-			font-family : 'Quicksand', sans-serif;
+			font-family : $font-pack1;
 			color : $white;
 		}
-		
-
 	}
 
 	&__bottom {
@@ -56,11 +53,11 @@
 			}
 		&--arrow {
 			z-index:4;
-			position:absolute;
 			width : 100%; 
 			display : flex ;
 			justify-content: center;
 			align-items:center;
+			margin-bottom: 15px;
 		}
 		&--right {
 			z-index : 2 ;
@@ -73,13 +70,14 @@
 		}
 	}
 
-	@include mq('phone-wide'){
+	@include mq('phone-wide') {
 		&__title{
 			width: 100%;
-			text-align: center;
-			
+			text-align: center;	
 		}
-
-		}
+	}
 }
 
+.homearrow	{
+	color: $white;
+}

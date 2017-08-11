@@ -1,37 +1,47 @@
 .projects {
-	height : 100vh;
-	background-size : cover ;
-	background-color : $sunshine ;
+	height: 100vh;
+	background-size : cover;
+	background-color : $sunshine;
 	color : $white;	
 	@include flexbox();
 	flex-direction : column;
 	justify-content : space-around;
 	align-items : center;
 	overflow:hidden;
-	&__top {
-		z-index : 2  ;
-		height : 200px  ;
+	font-family: $font-pack1;
+	&__arrow--top {
+		z-index: 3;
+		text-align: center;
 		width: 100%; 
-		margin-top : -100px  ;
-		background-color : $sunshineLight;
+		margin-top: 15px;
+	}
+	&__top {	
+		z-index: 2;
+		height: 200px;
+		width: 100%; 
+		margin-top: -100px;
+		background-color: $sunshineLight;
 		@include transform(0deg,-5deg);
 	}
-	&__title{
+	&__title {
 		z-index: 3;
 		margin-top: -30px;
 		margin-bottom: 0;
+		&--heading {
+			text-transform: uppercase;
+		}
 	}
 	&__grid {
 		display: flex;
 		align-items: center;
 		
-		&__sidebar1{
+		&__sidebar1 {
 			padding: 10px;
-			
 		}
+
 		&__list {
 			list-style-type: none;
-			display : flex;
+			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
@@ -39,14 +49,19 @@
 			height: 400px;
 			overflow: scroll;
 			&--item {
-				margin : 10px;
+				margin: 10px;
 				height: 200px;
 				width: 200px;
 				border: 5px solid $white;
 			}
 		}
+
 		&__sidebar2 {
 			@extend .projects__grid__sidebar1;
 		}
 	}
+}
+
+.projectsarrow	{
+	color: $white;
 }

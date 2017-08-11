@@ -5,45 +5,104 @@
 	<title>SASS Project</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 	<nav class="navigation">
-		<ul class="navigation__menu">
-			<li class="navigation__item"><a class="navigation__link--home active" href="#">HOME</a></li>
-			<li class="navigation__item"><a class="navigation__link--about" href="#">ABOUT</a></li>
-			<li class="navigation__item"><a class="navigation__link--projects" href="#">PROJECTS</a></li>
-		</ul>
-		<ul class="navigation__social">
-			<li class="social__item"><a class="social__link">Lets Connect!</a></li>
-			<li class="social__item"><a href="#" class="fa fa-linkedin"></a></li>
-			<li class="social__item"><a href="#" class="fa fa-github-alt"></a></li>
-		</ul>
+		<div class="navigation__menu">
+			<div class="navigation__menu--item">
+				<a class="navigation__link--home active" href="#">HOME</a>
+			</div>
+			<div class="navigation__menu--item">
+				<a class="navigation__link--about" href="#">ABOUT</a>
+			</div>
+			<div class="navigation__menu--item">
+				<a class="navigation__link--projects" href="#">PROJECTS</a>
+			</div>
+		</div>
+		<div class="navigation__social">
+			<p class="navigation__social__list--greet">Lets Connect!</p>
+			<div class="navigation__social__list">	
+				<div class="navigation__social__list--item">
+					<a href="#" class="fa fa-linkedin social"></a>
+				</div>
+				<div class="navigation__social__list--item">
+					<a href="#" class="fa fa-github-alt social"></a>
+				</div>
+			</div>
+		</div>
+		<div class="navigation__toggle" onclick="toggleNav(this)">
+			<span class="navigation__toggle--icon icon__1"></span>
+			<span class="navigation__toggle--icon icon__2"></span>
+			<span class="navigation__toggle--icon icon__3"></span>
+		</div>
 	</nav>
 	
 	<section class="home">
-	<div class="home__background">
-	</div>
-	<div class="skew__home--top">
-	</div>
-	<div class="skew__home--bottom">
-		<div class="skew__home-bottom--left">
-		
+		<div class="home__top">
 		</div>
-		<div class="skew__home-bottom--right">
-	
+		<div class="home__title">
+			<div class="home__title--greet">Hi I am</div>
+			<div class="home__title--name">Selvina Fernandes</div>
+			<div class="home__title--greet">Front-end Developer</div>
 		</div>
-	</div>
+		<div class="home__bottom">
+			<div class="home__bottom--left">	
+			</div>
+			<div class="home__bottom--right">
+			</div>
+			<div class="home__bottom--arrow">
+				<a href="#" class="arrow down homearrow"></a>
+			</div>
+		</div>
 	</section>		
 	
-	<section class="about">
-		
-		
+	<section id="#about" class="about">
+		<div class="about__arrow--top">
+			<a href="#" class="arrow up aboutarrow"></a>
+		</div>
+		<div class="about__top">
+		</div>
+		<div class="about__photo"></div>
+		<div class="about__desc">
+		<span class="about__desc--greeting">Nice to meet you</span>
+		<span class="about__desc--me">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		</span>
+		<span class=about__desc--sheading>Skills</span>
+		<span class="about__desc--skills">HTML,CSS and Javascript</span>
+		</div>
+		<div class="about__arrow--bottom">
+			<a href="#" class="arrow down aboutarrow"></a>
+		</div>	
 	</section>
 	<section class="projects">
-		
-		
+		<div class="projects__arrow--top">
+			<a href="#" class="arrow up projectsarrow"></a>
+		</div>
+		<div class="projects__top">
+		</div>
+		<div class="projects__title">
+		<h2>projects</h2>
+		</div>
+		<div class="projects__grid">
+			<div class="projects__grid__sidebar1">
+				<a href="#" class="arrow left projectsarrow"></a>
+			</div>
+			<ul class="projects__grid__list">
+			<li class="projects__grid__list--item"></li>
+			<li class="projects__grid__list--item"></li>
+			<li class="projects__grid__list--item"></li>
+			<li class="projects__grid__list--item"></li>
+			<li class="projects__grid__list--item"></li>
+			<li class="projects__grid__list--item"></li>
+
+			</ul>
+			<div class="projects__grid__sidebar2">
+				<a href="#" class="arrow right projectsarrow"></a>
+			</div>
+		</div>
 	</section>
-		
+	<script type="text/javascript" src="index.js"></script>	
 	</body>
 </html>
