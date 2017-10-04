@@ -26,13 +26,16 @@
 		padding: 0 ;
 		&--greet {
 			@include fontsize(50px) ;
+			z-index : 3;
+			font-weight: 400;
 			align-self: center;
 			font-family : $font-pack1;
 			color: $white;
 		}
 		&--name {
-			@include fontsize(60px);
+			@include fontsize(70px);
 			z-index : 3;
+			font-weight: 400;
 			align-self: center;
 			font-family : $font-pack1;
 			color : $white;
@@ -66,14 +69,21 @@
 			@include transform(0deg,-15deg) ;
 			opacity : 1 ;
 			width : 100% ;
-			margin-bottom :  -200px ;	
+			margin-bottom :  -210px ;	
 		}
 	}
 
 	@include mq('phone-wide') {
-		&__title{
+		&__title {
 			width: 100%;
 			text-align: center;	
+		}
+	}
+	@include mq(phone, max) {
+		&__title {
+			&--name{
+				@include fontsize(60px);
+			}
 		}
 	}
 }
@@ -81,3 +91,5 @@
 .homearrow	{
 	color: $white;
 }
+
+

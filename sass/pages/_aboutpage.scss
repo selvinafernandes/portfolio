@@ -9,16 +9,16 @@
 	&__top {
 		z-index: -1  ;
 		height: 200px  ;
-		margin-top: -80px  ;
+		margin-top: -30vh  ;
 		background-color: $aqua;
 		@include transform(0deg,5deg);
 		width: 100%;
 		opacity: 0.2;	
 	}
 	&__arrow--top {
-			position: absolute;
 			width: 100%; 
 			margin-top: 15px;
+			padding-bottom: 20px;
 			}
 	&__photo {
 		z-index: 2 ;
@@ -30,15 +30,41 @@
 		background: url("../images/IMG_5022.jpg") no-repeat center;
 		background-position: 50% 10% ;
 		background-size: 400px;
-		margin-top: -10vh;	
+		margin-top: -15vh;	
+		@include mq(phone, max) {
+			width: 130px;
+			height: 130px;
+			background-size: 250px;
+		}
 	}
 	&__desc {
-		margin-top: 50px;
+		&--greeting {
+			margin: 0;
+		}
 		&--me {
-			padding: 15px;
+			padding: 30px;
 			text-align:	center;
 			display: block;
+			@include fontsize(15px);
+			font-family: $font-pack1;
+			@include mq(small, max) {
+				padding: 25px;
+				@include fontsize(12px);
+			}
 		}
+		&--sheading	{
+			text-align: center;
+			display: block;
+			font-family: $font-pack;
+			color: $aqua;
+			text-transform: uppercase;
+		}
+		&--skills {
+			display: block;
+			font-style: italic;
+		}
+
+
 	}
 	&__arrow--bottom {
 		margin-bottom: 15px;
@@ -48,3 +74,4 @@
 .aboutarrow	{
 	color: $coal;
 }
+

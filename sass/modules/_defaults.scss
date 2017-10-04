@@ -7,7 +7,7 @@ html,body{
 }
 
 body{
-  font-family: $font-pack;
+  font-family: $font-pack;  
   @media screen and (max-width: 480px) {
     font-size: 1rem;
   }
@@ -34,6 +34,7 @@ p{
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 12px;
+    cursor: pointer;
 
 }
 .down {

@@ -1,108 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<meta charset="UTF-8">
-	<title>SASS Project</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">	
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta charset="UTF-8">
+		<title>SASS Project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">	
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-	<nav class="navigation">
-		<div class="navigation__menu">
-			<div class="navigation__menu--item">
-				<a class="navigation__link--home active" href="#">HOME</a>
-			</div>
-			<div class="navigation__menu--item">
-				<a class="navigation__link--about" href="#">ABOUT</a>
-			</div>
-			<div class="navigation__menu--item">
-				<a class="navigation__link--projects" href="#">PROJECTS</a>
-			</div>
-		</div>
-		<div class="navigation__social">
-			<p class="navigation__social__list--greet">Lets Connect!</p>
-			<div class="navigation__social__list">	
-				<div class="navigation__social__list--item">
-					<a href="#" class="fa fa-linkedin social"></a>
+		<nav class="navigation">
+			<div class="navigation__menu">
+				<div class="navigation__menu--item">
+					<a class="navigation__link--home active" href="#home">HOME</a>
 				</div>
-				<div class="navigation__social__list--item">
-					<a href="#" class="fa fa-github-alt social"></a>
+				<div class="navigation__menu--item">
+					<a class="navigation__link--about" href="#about">ABOUT</a>
+				</div>
+				<div class="navigation__menu--item">
+					<a class="navigation__link--projects" href="#projects">PROJECTS</a>
 				</div>
 			</div>
-		</div>
-		<div class="navigation__toggle" onclick="toggleNav(this)">
-			<span class="navigation__toggle--icon icon__1"></span>
-			<span class="navigation__toggle--icon icon__2"></span>
-			<span class="navigation__toggle--icon icon__3"></span>
-		</div>
-	</nav>
-	
-	<section class="home">
-		<div class="home__top">
-		</div>
-		<div class="home__title">
-			<div class="home__title--greet">Hi I am</div>
-			<div class="home__title--name">Selvina Fernandes</div>
-			<div class="home__title--greet">Front-end Developer</div>
-		</div>
-		<div class="home__bottom">
-			<div class="home__bottom--left">	
+			<div class="navigation__social">
+				<p class="navigation__social__list--greet">Lets Connect!</p>
+				<div class="navigation__social__list">	
+					<div class="navigation__social__list--item">
+						<a target="_blank" href="https://www.linkedin.com/in/selvina-fernandes-020b58a5/" class="fa fa-linkedin social"></a>
+					</div>
+					<div class="navigation__social__list--item">
+						<a target="_blank" href="https://github.com/selvinafernandes" class="fa fa-github-alt social"></a>
+					</div>
+				</div>
 			</div>
-			<div class="home__bottom--right">
+			<div class="navigation__toggle" onclick="toggleNav(this)">
+				<span class="navigation__toggle--icon icon__1"></span>
+				<span class="navigation__toggle--icon icon__2"></span>
+				<span class="navigation__toggle--icon icon__3"></span>
 			</div>
-			<div class="home__bottom--arrow">
-				<a href="#" class="arrow down homearrow"></a>
-			</div>
-		</div>
-	</section>		
-	
-	<section id="#about" class="about">
-		<div class="about__arrow--top">
-			<a href="#" class="arrow up aboutarrow"></a>
-		</div>
-		<div class="about__top">
-		</div>
-		<div class="about__photo"></div>
-		<div class="about__desc">
-		<span class="about__desc--greeting">Nice to meet you</span>
-		<span class="about__desc--me">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-		</span>
-		<span class=about__desc--sheading>Skills</span>
-		<span class="about__desc--skills">HTML,CSS and Javascript</span>
-		</div>
-		<div class="about__arrow--bottom">
-			<a href="#" class="arrow down aboutarrow"></a>
-		</div>	
-	</section>
-	<section class="projects">
-		<div class="projects__arrow--top">
-			<a href="#" class="arrow up projectsarrow"></a>
-		</div>
-		<div class="projects__top">
-		</div>
-		<div class="projects__title">
-		<h2>projects</h2>
-		</div>
-		<div class="projects__grid">
-			<div class="projects__grid__sidebar1">
-				<a href="#" class="arrow left projectsarrow"></a>
-			</div>
-			<ul class="projects__grid__list">
-			<li class="projects__grid__list--item"></li>
-			<li class="projects__grid__list--item"></li>
-			<li class="projects__grid__list--item"></li>
-			<li class="projects__grid__list--item"></li>
-			<li class="projects__grid__list--item"></li>
-			<li class="projects__grid__list--item"></li>
+		</nav>
 
-			</ul>
-			<div class="projects__grid__sidebar2">
-				<a href="#" class="arrow right projectsarrow"></a>
+		<section id="home" class="home">
+			<div class="home__top">
 			</div>
-		</div>
-	</section>
-	<script type="text/javascript" src="index.js"></script>	
+			<div class="home__title">
+				<div class="home__title--greet">Hi I am</div>
+				<div class="home__title--name">Selvina Fernandes</div>
+				<div class="home__title--greet">Front-end Developer</div>
+			</div>
+			<div class="home__bottom">
+				<div class="home__bottom--left">	
+				</div>
+				<div class="home__bottom--right">
+				</div>
+				<div class="home__bottom--arrow">
+					<a class="arrow down homearrow"></a>
+				</div>
+			</div>
+		</section>		
+	
+		<section id="about" class="about">
+			<div class="about__arrow--top">
+				<a class="arrow up aboutarrow"></a>
+			</div>
+			<div class="about__top">
+			</div>
+			<div class="about__photo"></div>
+			<div class="about__desc">
+			<h3 class="about__desc--greeting">Nice to meet you</h3>
+			<span class="about__desc--me">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</span>
+			<span class=about__desc--sheading>Skills</span>
+			<span class="about__desc--skills">HTML,CSS and Javascript</span>
+			</div>
+			<div class="about__arrow--bottom">
+				<a class="arrow down aboutarrow"></a>
+			</div>	
+		</section>
+		<section id="projects" class="projects">
+			<div class="projects__arrow--top">
+				<a class="arrow up projectsarrow"></a>
+			</div>
+			<div class="projects__top">
+			</div>
+			<h2 class="projects__title">projects</h2>
+			<div class="projects__grid">
+				<div class="projects__grid__sidebar1" id="sidebar-left">
+					<a class="arrow left projectsarrow"></a>
+				</div>
+				<div class="projects__grid__list" id="grid_list">
+					<div class="projects__grid__list--item">
+						<a class="item--title"></a>
+					</div>
+					<div class="projects__grid__list--item">
+						<a class="item--title"></a>
+					</div>
+					<div class="projects__grid__list--item">
+						<a class="item--title"></a>
+					</div>
+					<div class="projects__grid__list--item">
+						<a class="item--title"></a>
+					</div>
+					<div class="projects__grid__list--item">
+						<a class="item--title"></a>
+					</div>
+					<div class="projects__grid__list--item">
+						<a class="item--title"></a>
+					</div>
+				</div>
+				<div class="projects__grid__sidebar2" id="sidebar-right">
+					<a class="arrow right projectsarrow"></a>
+				</div>
+			</div>
+			<div class="projects__popup hidden" id="popup">
+				<div class="projects__close">
+					<span class="projects__close--button" id="close">&times;</span>
+				</div>
+				<span class="projects__name">Lorem Ipsum</span>
+				<div class="projects__content">
+					<div class="projects__image"></div>
+					<div class="projects__desc">
+						<span class="projects__desc--para">
+						</span>
+						<div class="projects__desc--skills">
+						<h4 class="projects__skills">Skills</h4>
+						<span class="projects__tech">HTML, CSS and Javascript</span>
+						</div>
+						<div class="projects__desc--social">
+						<div class="project__icons">
+							<a href="#" class="fa fa-linkedin social"></a>
+							<span>View online</span>
+						</div>
+						<div class="project__icons">
+							<a href="#" class="fa fa-github-alt social"></a>
+							<span>View on Github</span>
+						</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="index.js"></script>	
+		<script type="text/javascript" src="projects.js"></script>	
 	</body>
 </html>

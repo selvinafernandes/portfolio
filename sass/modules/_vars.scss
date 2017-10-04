@@ -5,11 +5,13 @@ $aqua: #0CD8A5;
 $white: #FFFFFF;
 $sunshine: #FAD538;
 $sunshineLight: #FCE586;
-$font-pack1: 'Quicksand', sans-serif; 
+$font-pack1: 'Quicksand', sans-serif;
+
 
 
 /* Breakpoint setup for media queries */
-	$breakpoints: ( 
+	$breakpoints: (
+		'small': 350px,
 		'phone': 400px,
 		'phone-wide': 480px,
 		'phablet': 560px,

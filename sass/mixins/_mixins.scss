@@ -18,30 +18,24 @@
 @mixin flexdir($dir,$justify){
 	flex-direction:$dir;
 	justify-content:$justify;
-
 }
-
 
 @mixin breakpoint($class){
 	@if $class == small {
-		@media(min-width:768px){
+		@media(min-width:320px){
 			@content;
 			}
 	}
 	@else if $class == medium {
 		@media(min-width:768px){
 			@content;
-		
 		}
-		
 	}
 	@else if $class == large {
 		@media(min-width:1200px){
 			@content;
-		
-			}
+		}
 	}
-
 }
 
 @mixin mq($width, $type: max) {
@@ -75,8 +69,6 @@
 
 	
 @mixin linx() {
-	
-	
 	 &:active {
 		.navigation__link--home{
 			@include menu(#FAD538);
@@ -101,10 +93,7 @@
 		.navigation__link--projects{
 			@include menu(#0CD8A5);
 		}
-
-
 	}
-
 }
 
 @mixin transform($xaxis,$yaxis){

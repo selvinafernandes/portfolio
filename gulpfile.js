@@ -1,18 +1,11 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var runSequence = require('run-sequence');
 
-		
-	gulp.task('sass',function(){
-		return gulp.src('sass/**/*.scss')
-			.pipe(sass())
-			.pipe(gulp.dest('css/'))
-			
-		
-	});
+gulp.task('default',function(){
+	runSequence(
+		['sass','watch']
+	);
+});
 	
-	gulp.task('default',['sass'],function(){
-			
-				gulp.watch('sass/**/*.scss',['sass']);
-			
-	});
-	
+var requireDir = require('require-dir');
+requireDir('gulp/tasks');

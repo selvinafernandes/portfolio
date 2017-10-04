@@ -5,12 +5,14 @@
 	color : $white;	
 	@include flexbox();
 	flex-direction : column;
-	justify-content : space-around;
+	justify-content : space-between;
 	align-items : center;
+	text-align: center;
 	overflow:hidden;
 	font-family: $font-pack1;
+
 	&__arrow--top {
-		z-index: 3;
+		z-index: 7;
 		text-align: center;
 		width: 100%; 
 		margin-top: 15px;
@@ -19,49 +21,190 @@
 		z-index: 2;
 		height: 200px;
 		width: 100%; 
-		margin-top: -100px;
+		margin-top: -30vh;
 		background-color: $sunshineLight;
 		@include transform(0deg,-5deg);
 	}
 	&__title {
 		z-index: 3;
-		margin-top: -30px;
-		margin-bottom: 0;
-		&--heading {
-			text-transform: uppercase;
-		}
+		margin-top: -10vh;
 	}
 	&__grid {
 		display: flex;
 		align-items: center;
-		
+		width: 100vw;
+
 		&__sidebar1 {
-			padding: 10px;
+			z-index : 4;
+			padding-left: 10px;
 		}
 
 		&__list {
 			list-style-type: none;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-			padding: 0;
-			height: 400px;
-			overflow: scroll;
-			&--item {
-				margin: 10px;
-				height: 200px;
-				width: 200px;
-				border: 5px solid $white;
+			height: 60vh;
+			width: 94vw;
+			margin: 0 3vw;
+			white-space: nowrap;
+			display: inline-block;
+			overflow-y: hidden;
+			overflow-x: hidden;
+			position: relative;
+			left: 0;
+			cursor: pointer;
+				&--item {
+					position: absolute;
+					margin: 10px;
+					height: 250px;
+					width: 250px;
+					left:0;
+					right: 0;
+					border: 5px solid $white;
+					display: inline-block;
+					&:hover {
+						cursor: pointer;
+						border: 5px solid $aqua;
+					}
+				}
+				
+			@include mq(tablet-wide){
+				margin: 0 2vw;
+				width: 96vw;
+			}
+			@include mq(phone-wide){
+				margin: 0;
+				width: 100vw;
 			}
 		}
 
 		&__sidebar2 {
-			@extend .projects__grid__sidebar1;
+			padding-right: 10px;
 		}
 	}
+	&__popup {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		align-items: center;
+		z-index: 5;
+		width: 92vw;
+		height: 80vh;
+		background-color: $white;
+		left: 4vw;
+		top: 10vh;
+
+		@include mq(phone) {
+		width: 90vw;
+		height: 80vh;
+		left: 5vw;
+		top: 10vh;
+		}
+	}
+	&__close {
+		display: flex;
+		align-self:	flex-end;
+		align-items: center;
+		width: 24px;
+		border: solid 2px black;
+		border-radius: 13%;
+		margin: 10px;
+		z-index: -1;
+		&--button {
+			margin-top: -4px;
+			width: 100vw;
+			color:$coal;
+			font-size: 28px;
+			font-weight: bold;
+			cursor: pointer;
+			z-index: 2;
+			&:hover {
+				color: $aqua;
+			}
+		}
+	}
+	&__name {
+		@include fontsize(34px);
+		color: $coal;
+		@include mq(phone-wide) {
+			@include fontsize(30px);
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80vh;
+		@include mq(phone-wide) {
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+	&__image {
+		background: url('../images/IMG_5022.jpg');
+		background-size: cover;
+		height:	80%;
+		width: 50%;
+		margin: 30px;
+		border: solid $sunshine 2px;
+		@include mq(phone-wide) {
+			width: 80%;
+			margin: 10px;
+		}
+	}
+	&__desc {
+		width: 40%;
+		height: 80%;
+		color: $coal;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		&--para {
+			text-align: left;
+			font-size: small;
+		}
+		&--skills {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}	
+		&--social {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			text-align: left;
+			a {
+				margin-right: 10px;
+			}
+		}
+		@include mq(phone-wide) {
+			width: 80%;
+			height: 100%;
+		}
+	}
+	&__skills {
+		margin:	0;
+		text-transform: uppercase;
+		color: $sunshine;
+	}
+	&__tech {
+		font-style: italic;
+	}
+
 }
 
 .projectsarrow	{
 	color: $white;
 }
+
+.hidden {
+	display: none;
+}
+
+.project__icons {
+	padding-bottom: 10px;
+}
+
+
+
+
